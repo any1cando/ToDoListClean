@@ -43,6 +43,9 @@ android {
 
 dependencies {
 
+    implementation(project(":domain"))
+    implementation(project(":data"))
+
     // Jetpack Navigation dependency
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
@@ -50,6 +53,13 @@ dependencies {
     // Hilt dependency
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
+
+    // Kotlin Coroutines
+    implementation(libs.kotlinx.coroutines.core)
+    implementation(libs.kotlinx.coroutines.android)
+
+    // Lifecycle KTX (нужен для lifecycleScope)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
 
 
     implementation(libs.androidx.core.ktx)
